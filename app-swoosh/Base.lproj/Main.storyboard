@@ -163,6 +163,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="Mnd-Fi-1g2" eventType="touchUpInside" id="rO2-S1-zFT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW8-wa-xri">
                                 <rect key="frame" x="20" y="44" width="29" height="24"/>
@@ -197,6 +200,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jxP-4E-hpM"/>
+                    <connections>
+                        <segue destination="gYq-Pb-fFY" kind="show" identifier="skillVCSegue" id="ZS1-q0-9rj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtk-lT-2Xo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="FOm-JR-czB" userLabel="Exit" sceneMemberID="exit"/>
@@ -206,7 +212,7 @@
         <!--SkillVC-->
         <scene sceneID="JMr-Jn-jKx">
             <objects>
-                <viewController id="gYq-Pb-fFY" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="gYq-Pb-fFY" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mXQ-q6-ysX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,6 +297,7 @@
                             <constraint firstItem="UFY-aF-1Jl" firstAttribute="trailing" secondItem="I9g-gi-CyF" secondAttribute="trailing" constant="20" id="yGL-MQ-dgx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Hxn-TC-CzX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqE-eM-Yof" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

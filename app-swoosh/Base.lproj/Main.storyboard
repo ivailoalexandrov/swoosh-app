@@ -80,10 +80,6 @@
                             <constraint firstItem="4vg-Ec-KbD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="twR-pW-h6Z"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="bgimg" destination="4vg-Ec-KbD" id="rg6-bp-lAK"/>
-                        <outlet property="swoosh" destination="w0B-XE-SyJ" id="HyC-Ad-Rm1"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

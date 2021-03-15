@@ -47,6 +47,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Mnd-Fi-1g2" kind="show" id="ceU-u6-NUd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a team in your city &amp; dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krY-Z1-xIM">
                                 <rect key="frame" x="77" y="291.5" width="260" height="41"/>
@@ -89,7 +92,7 @@
         <!--View Controller-->
         <scene sceneID="gcT-HA-g2w">
             <objects>
-                <viewController id="Mnd-Fi-1g2" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Mnd-Fi-1g2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jS3-i8-bCF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,6 +168,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW8-wa-xri">
+                                <rect key="frame" x="20" y="44" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="CT1-BE-3cn"/>
+                                    <constraint firstAttribute="width" constant="29" id="ZxU-cA-Hz2"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="FOm-JR-czB" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="L9W-pj-tTB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C7U-6x-lsQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -178,14 +192,18 @@
                             <constraint firstItem="C7U-6x-lsQ" firstAttribute="trailing" secondItem="xDp-WR-NdD" secondAttribute="trailing" id="QJs-GY-SpB"/>
                             <constraint firstItem="02Z-jA-le4" firstAttribute="bottom" secondItem="C7U-6x-lsQ" secondAttribute="bottom" id="RUZ-u3-TB5"/>
                             <constraint firstItem="C7U-6x-lsQ" firstAttribute="trailing" secondItem="02Z-jA-le4" secondAttribute="trailing" constant="20" id="Xyz-mV-8ZL"/>
+                            <constraint firstItem="vW8-wa-xri" firstAttribute="leading" secondItem="C7U-6x-lsQ" secondAttribute="leading" constant="20" id="eLq-HK-uGW"/>
                             <constraint firstItem="d0D-eA-fEY" firstAttribute="leading" secondItem="C7U-6x-lsQ" secondAttribute="leading" id="ei2-pu-ARe"/>
+                            <constraint firstItem="vW8-wa-xri" firstAttribute="top" secondItem="C7U-6x-lsQ" secondAttribute="top" id="kSK-vn-XXQ"/>
                             <constraint firstItem="zyt-oo-lc8" firstAttribute="leading" secondItem="C7U-6x-lsQ" secondAttribute="leading" constant="20" id="o2k-Ez-lUg"/>
                             <constraint firstItem="02Z-jA-le4" firstAttribute="leading" secondItem="C7U-6x-lsQ" secondAttribute="leading" constant="20" id="ujj-EW-bge"/>
                             <constraint firstItem="d0D-eA-fEY" firstAttribute="top" secondItem="jS3-i8-bCF" secondAttribute="top" id="veh-Yk-uWi"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jxP-4E-hpM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtk-lT-2Xo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="FOm-JR-czB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="805.79710144927537" y="75.669642857142847"/>
         </scene>
@@ -284,6 +302,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>

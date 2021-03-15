@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         bgimg.frame = view.frame
 */
     }
+    
+    @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue) {
+        
+    }
 
 
 }
